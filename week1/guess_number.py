@@ -6,7 +6,7 @@ def guess_number():
     guess_words = [''] * len(words)
     life = len(words) *2
     print(guess_words)
-    while(life>0):
+    while life > 0 and guess_words != list(words):
         word = input("please input:")
         if words.__contains__(word):
             life = life -1
