@@ -1,12 +1,26 @@
 class Open:
-    def search(words):
+    def __init__(self, words):
+        self.words = words  # 保存字符串
 
-        print(len(words))
-        result = words.upper()
-        print(result)
+    def search(self, char):
+        position = self.words.find(char)
+        if position != -1:
+            print(f"char '{char}' in the position: {position}")
+        else:
+            print(f"char '{char}' not found")
+
+    def print_length(self):
+        print(f"words length: {len(self.words)}")
+
+    def print_uppercase(self):
+        print(f"upper words: {self.words.upper()}")
 
 
 if __name__ == "__main__":
-    print("please input the words")
-    words = input()
-    Open.search(words)
+    words = input("input words: ")
+    char = input("input search char: ")
+
+    obj = Open(words)
+    obj.search(char)
+    obj.print_length()
+    obj.print_uppercase()
