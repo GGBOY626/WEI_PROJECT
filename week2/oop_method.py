@@ -1,6 +1,6 @@
 class Open:
     def __init__(self, words):
-        self.words = words  # 保存字符串
+        self.words = words
 
     def search(self, char):
         position = self.words.find(char)
