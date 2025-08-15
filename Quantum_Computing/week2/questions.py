@@ -16,13 +16,12 @@ def verify_coordinates(x,y):
     r = math.sqrt(x ** 2 + y ** 2)
     theta_rad = math.atan2(y, x)
     angle = math.degrees(theta_rad)
-
+    # verify
     x_verify = r * math.cos(theta_rad)
     y_verify = r * math.sin(theta_rad)
     return angle,x_verify,y_verify
 
 
-# calculate angle
 if __name__ == '__main__':
     x = 3
     y = 6
