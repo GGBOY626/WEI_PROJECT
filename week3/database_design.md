@@ -15,7 +15,7 @@ teacher_student_table: A relationship table linking students and teachers
 
 program -> student 1->N
 
-program -> teacher 1->N
+program -> teacher M->N
 
 student -> teacher M->N
 
