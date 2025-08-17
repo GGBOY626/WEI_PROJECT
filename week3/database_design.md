@@ -13,9 +13,9 @@ Teacher:   save each teacher’s ID, name and email
 Program: save the program's name and code
 teacher_student_table: A relationship table linking students and teachers
 
-program -> student 1->N
+program(Major) -> student 1->N
 
-program -> teacher M->N
+program(Major) -> teacher M->N
 
 student -> teacher M->N
 
