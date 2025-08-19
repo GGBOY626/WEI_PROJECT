@@ -1,14 +1,21 @@
+import configparser
+
 from pymysql import Connection
 
 class YooBeeDatabase:
-    def __init__(self, host='localhost', port=3306, user='root', password='Yoobee@2025!', db='test'):
+    def __init__(self, config_path="db_config.ini"):
+        config = configparser.ConfigParser()
+        config.read(config_path, encoding="utf-8")
+
+        db_cfg = config["database"]
+
         self.conn = Connection(
-            host=host,
-            port=port,
-            user=user,
-            password=password
+            host=db_cfg.get("host"),
+            port=db_cfg.getint("port"),
+            user=db_cfg.get("user"),
+            password=db_cfg.get("password")
         )
-        self.conn.select_db(db)
+        self.conn.select_db(db_cfg.get("db"))
         self.cursor = self.conn.cursor()
 
     def __enter__(self):
@@ -91,8 +98,8 @@ class YooBeeDatabase:
 
 if __name__ == "__main__":
     with YooBeeDatabase() as db:
-        # db.add_program("Computer Science", "CS")
-        # print("Programs:", db.get_programs())
+        db.add_program("Bussiness Analyse", "BA")
+        print("Programs:", db.get_programs())
 
         # student
         # db.add_student("CS", "Ray2", "FEMALE", "NZ", "ray@test.com", 2, "2000-01-01")
@@ -103,5 +110,5 @@ if __name__ == "__main__":
         # print("Teachers:", db.get_teachers())
         # #
         # # # teacher_student_table
-        db.add_teacher_student(4, 3)
-        print("Teacher-Student Links:", db.get_teacher_students())
+        # db.add_teacher_student(4, 3)
+        # print("Teacher-Student Links:", db.get_teacher_students())
