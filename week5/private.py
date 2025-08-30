@@ -20,6 +20,8 @@ class Student(Teacher):
         print("Student can access public name:", self.name)
         # protect
         print("Student can access protected visa_card:", self._visa_card)
+        # private
+        # print(self.__bank_account)  # subclass can not use private attribute
 if __name__ == '__main__':
     t = Teacher("Mike", "VISA-123", "BANK-456")
     t.speak()
