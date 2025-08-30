@@ -12,11 +12,9 @@ class Teacher:
 
     def speak2(self):
         print('teacher bank_account is ' + self.__bank_account)
-class Student:
+class Student(Teacher):
     def __init__(self, name, visa_card, bank_account):
-        self.name = name #public
-        self._visa_card = visa_card #protect
-        self.__bank_account = bank_account #private
+        super().__init__(name, visa_card, bank_account)
     def show(self):
         # public
         print("Student can access public name:", self.name)
