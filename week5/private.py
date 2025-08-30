@@ -1,8 +1,12 @@
 class Teacher:
+# ----------------- Explanation -----------------
+# public attribute like name can use by anywhere
+# protect attribute like _visa_card suggested by subclass
+# private only use by internal class like __bank_account only use in Teacher
     def __init__(self,name,visa_card,bank_account):
-        self.name = name
-        self._visa_card = visa_card
-        self.__bank_account = bank_account
+        self.name = name # public
+        self._visa_card = visa_card #protect
+        self.__bank_account = bank_account #private
     def speak(self):
         print('teacher _visa_card is '+self._visa_card)
 
@@ -10,9 +14,9 @@ class Teacher:
         print('teacher bank_account is ' + self.__bank_account)
 class Student:
     def __init__(self, name, visa_card, bank_account):
-        self.name = name
-        self._visa_card = visa_card
-        self.__bank_account = bank_account
+        self.name = name #public
+        self._visa_card = visa_card #protect
+        self.__bank_account = bank_account #private
     def show(self):
         # public
         print("Student can access public name:", self.name)
