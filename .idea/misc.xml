@@ -4,4 +4,5 @@
     <option name="sdkName" value="Python 3.13 (test01)" />
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (test01)" project-jdk-type="Python SDK" />
 </project>
