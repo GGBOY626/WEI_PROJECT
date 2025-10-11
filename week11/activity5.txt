@@ -1,0 +1,52 @@
+🧩 Project Title
+
+AI Booking and Scheduling System for Cleaning Services
+
+👥 Group Name
+
+Group Z
+
+👨‍💻 Team Members
+
+Member WeiZheng – Backend Lead (FastAPI / PostgreSQL / Google API Integration)
+
+Member WeiZhang – Frontend Lead (React / UI / UX / API Integration)
+
+🔧 Functional Requirements
+No.	Requirement Description	Status
+F1	Allow users to make cleaning bookings using natural language input.	❌ Not Passed – planned but not implemented yet.
+F2	Parse text into structured fields (rooms, address, time, services).	❌ Not Passed – planned NLP model integration.
+F3	Automatically calculate quotation based on service type and pricing rules.	❌ Not Passed – pricing logic designed but not coded.
+F4	Create orders and track their status.	❌ Not Passed – will be implemented in backend.
+F5	Recommend cleaners based on skills, calendar, and location.	❌ Not Passed – design ready, algorithm pending.
+F6	Allow managers to assign cleaners manually or automatically.	❌ Not Passed – to be developed.
+F7	Cleaners can accept, start, and complete jobs with status updates.	❌ Not Passed – planned API endpoints.
+F8	Sync bookings with Google Calendar.	❌ Not Passed – integration not started.
+F9	Estimate travel time and distance via Google Maps API.	❌ Not Passed – integration not started.
+F10	Admin can manage pricing rules, cleaners, and reports.	❌ Not Passed – database structure only planned.
+F11	Implement mock payment flow.	❌ Not Passed – to be implemented in final week.
+F12	Frontend UI for customer booking, quotation, and tracking.	❌ Not Passed – not developed yet.
+F13	Frontend UI for cleaners to manage their jobs.	❌ Not Passed – not started.
+F14	Store audit logs for system actions.	❌ Not Passed – planned in backend schema.
+
+⚙️ Non-Functional Requirements
+No.	Requirement Description	Status
+N1	System should respond within 300 ms (MVP goal).	🧩 Planned – will test after development.
+N2	Modular and scalable architecture (backend + frontend separation).	🧩 Planned – designed in architecture.
+N3	JWT-based authentication for all roles.	❌ Not Passed – not implemented yet.
+N4	Database consistency and idempotent APIs.	🧩 Planned – design defined, not yet coded.
+N5	OpenAPI documentation for all routes.	🧩 Planned – to be generated from FastAPI.
+N6	Responsive frontend design using React and Ant Design.	🧩 Planned – UI framework chosen, not built yet.
+N7	Secure integration with Google APIs (OAuth2).	❌ Not Passed – not started.
+N8	Unit testing for key backend modules.	❌ Not Passed – not implemented.
+N9	Unified error handling and logging.	🧩 Planned – design included in error model.
+N10	Demo and documentation.	🧩 Planned – will be prepared at final stage.
+📊 Summary
+
+Functional Requirements Completed: 0 / 14
+
+Non-Functional Requirements Completed: 0 / 10
+
+Project Status: Planning & design stage only.
+
+Development will start in upcoming weeks following the 3-week schedule document.
